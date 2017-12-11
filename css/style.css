@@ -1,0 +1,77 @@
+@charset "utf8";
+
+/* Estilo do Mapa SP */
+* {
+    box-sizing: border-box
+}
+
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.mapa {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    max-width: 700px;
+    height: 80vh;
+    margin: 20px auto
+}
+.imagem-mapa {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 280px;
+    bottom: 0
+}
+.imagem-mapa svg {
+    width: 100%;
+    height: 80vh;
+}
+.imagem-mapa path {
+    fill: #a2c4de;
+    stroke: #769cb5;
+    stroke-width: .5px;
+    transition: fill .3s
+}
+.imagem-mapa .ativado path {
+    fill: #FC5050
+}
+.mapa-lista {
+    float: right;
+    width: 280px;
+    border-left: 1px solid #dbdbdb
+}
+.mapa-lista li,
+.mapa-lista ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+.mapa-lista a {
+    padding-left: 10px;
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.8rem;
+    transition: .3s
+}
+.mapa-lista a.ativado {
+    color: #FC5050;
+    background-color: #f4f4f4
+}
+@media screen and (max-width: 720px) {
+    .mapa-lista {
+        float: none;
+        width: 100%;
+        border-left: 1px solid #dbdbdb
+    }
+    .imagem-mapa {
+        padding: 10px;
+        position: static;
+        width: 100%
+    }
+} /* Fim Mapa SP */

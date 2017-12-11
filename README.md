@@ -1,2 +1,2 @@
 # mapa-svg
-Mapa interativo usando svg
+Mapa interativo HTML usando SVG.
